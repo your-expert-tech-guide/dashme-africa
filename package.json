@@ -1,0 +1,41 @@
+{
+  "name": "dashme-africa-app",
+  "version": "1.0.0",
+  "description": "e-commerce webapp built with MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/your-expert-tech-guide/dashme-africa-app.git"
+  },
+  "author": "Your Expert Tech Guide",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-expert-tech-guide/dashme-africa-app/issues"
+  },
+  "homepage": "https://github.com/your-expert-tech-guide/dashme-africa-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.2",
+    "react-toastify": "^10.0.6"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.7"
+  }
+}
